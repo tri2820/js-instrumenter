@@ -43,6 +43,16 @@ const o = (x, ...args) => {
   return z(...args);
 };
 
+const q = () => 12;
+
+function u(e) {
+  return (x = g(x, e));
+}
+
+function t() {
+  console.log(this);
+}
+
 f(1);
 g(1);
 k(1);
@@ -52,3 +62,5 @@ h(1);
 z(1);
 m(1);
 o(1);
+q(1);
+t(1);

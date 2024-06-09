@@ -20,7 +20,10 @@ const createLogExpression = (name, params) => ({
 });
 
 const createFunctionExpression = (node, name) => ({
-  type: "FunctionExpression",
+  type:
+    node.type == "ArrowFunctionExpression"
+      ? "ArrowFunctionExpression"
+      : "FunctionExpression",
   id: null,
   params: node.params,
   body: {
